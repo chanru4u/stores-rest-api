@@ -16,10 +16,6 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = 'ravi'
 api = Api(app)
 
-@app.before_first_request
-def create_tables():
-    db.create_all()
-
 jwt = JWT(app, authenticate, identity)
 
 items = [{"name": "item1"}, {"name": "item2"}, {"name": "item3"}]
