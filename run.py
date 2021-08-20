@@ -1,5 +1,5 @@
-from db import db
 from app_flask_restful import app
+from db import db
 
 db.init_app(app)
 
@@ -7,4 +7,3 @@ db.init_app(app)
 def create_tables():
     db.create_all()
 
-app.run(port=4998, debug=True)
